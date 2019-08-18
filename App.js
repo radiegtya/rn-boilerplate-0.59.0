@@ -1,28 +1,29 @@
+import React from 'react'
 import { createStackNavigator, createAppContainer } from "react-navigation"
 
-import Houses from './screens/houses'
-import HouseDetail from './screens/house-detail'
-// import AddHouse from './screens/add-house'
+import Movies from './screens/movies'
+import MovieAdd from './screens/movie-add'
+import MovieDetail from './screens/movie-detail'
 
 const AppNavigator = createStackNavigator({
-  Houses: {
-    screen: Houses,
+  Movies: {
+    screen: Movies,
     navigationOptions: {
-      title: 'Kos Normal',
+      title: 'Movies',
     },
   },
-  HouseDetail: {
-    screen: HouseDetail,
+  MovieAdd: {
+    screen: MovieAdd,
     navigationOptions: {
-      title: 'Detail Kos Normal',
+      title: 'Add Movie',
     },
   },
-  // AddHouse: {
-  //   screen: AddHouse,
-  //   navigationOptions: {
-  //     title: 'Add Kos Normal',
-  //   },
-  // }
+  MovieDetail: {
+    screen: MovieDetail,
+    navigationOptions: {
+      title: 'Movie Detail',
+    },
+  },  
 })
 
 export default createAppContainer(AppNavigator)
